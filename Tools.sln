@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextExtractor", "TextExtrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{2A405675-08A7-425F-A6FE-C74AD9622803}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiChatBot", "AiChatBot\AiChatBot.csproj", "{39DB0A90-9042-477B-A7A4-B9D37E112AF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2A405675-08A7-425F-A6FE-C74AD9622803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A405675-08A7-425F-A6FE-C74AD9622803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A405675-08A7-425F-A6FE-C74AD9622803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DB0A90-9042-477B-A7A4-B9D37E112AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DB0A90-9042-477B-A7A4-B9D37E112AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DB0A90-9042-477B-A7A4-B9D37E112AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DB0A90-9042-477B-A7A4-B9D37E112AF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

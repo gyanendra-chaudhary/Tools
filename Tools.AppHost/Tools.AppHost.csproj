@@ -16,6 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\AiChatBot\AiChatBot.csproj" />
 		<ProjectReference Include="..\TextExtractor\TextExtractor.csproj" />
 	</ItemGroup>
 

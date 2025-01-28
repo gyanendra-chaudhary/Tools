@@ -20,7 +20,6 @@
 
 	<ItemGroup>
 		<Folder Include="Files\" />
-		<Folder Include="tessdata\" />
 	</ItemGroup>
 
 </Project>

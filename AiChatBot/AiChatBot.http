@@ -1,6 +1,0 @@
-@AiChatBot_HostAddress = http://localhost:5238
-
-GET {{AiChatBot_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

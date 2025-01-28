@@ -1,4 +1,6 @@
-﻿namespace TextExtractor.Helpers
+﻿using Microsoft.AspNetCore.Http;
+
+namespace TextExtractor.Helpers
 {
     public class FileHelper
     {
@@ -13,7 +15,7 @@
             {
                 Directory.CreateDirectory(uploadPath);
             }
-            var uniqueFileName = file.FileName+ "-" + Guid.NewGuid() + Path.GetExtension(file.FileName);
+            var uniqueFileName = file.FileName + "-" + Guid.NewGuid() + Path.GetExtension(file.FileName);
             var filePath = Path.Combine(uploadPath, uniqueFileName);
 
             try

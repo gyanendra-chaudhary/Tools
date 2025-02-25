@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RunManager" selected=".NET Launch Settings Profile.esn-dictionary: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.esn-dictionary: https">
     <configuration name="esn-dictionary: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/esn-dictionary.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />

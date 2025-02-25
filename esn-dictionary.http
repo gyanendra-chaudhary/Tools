@@ -1,0 +1,6 @@
+@esn_dictionary_HostAddress = http://localhost:5124
+
+GET {{esn_dictionary_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

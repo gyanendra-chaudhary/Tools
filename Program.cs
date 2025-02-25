@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Scalar.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/
 builder.Services.AddOpenApi();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -10,32 +14,35 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapGet("/", () =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
+    if (app.Environment.IsDevelopment())
     {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast");
+        return Results.Redirect("/scalar");
+    }
+
+    return Results.Json(
+        new
+        {
+            AppDetails = new
+            {
+                AppName = "esn-dictionary",
+                AppVersion = "v1",
+                PublishDate = "2-26-2025",
+                Description = ""
+            },
+            DeveloperDetails = new
+            {
+                Name = "Gyanendra Chaudhary",
+                Email = "dev.gyanendrapc@gmail.com"
+            }
+        });
+});
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
